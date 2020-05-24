@@ -17,8 +17,8 @@ router.get('/calculator', function(req, res) {
 router.post('/calculator', function(req, res) {
  
   
-var numero1=req.body.numero1;
-var numero2=req.body.numero2;
+var n1=req.body.n1;
+var n2=req.body.n2;
 var btnsumar=req.body.btnsumar;
 var btnrestar=req.body.btnrestar;
 var btnmultiplicar=req.body.btnmultiplicar;
@@ -28,25 +28,25 @@ var resultado;
 
 if((POST["btnsumar"]))
 {
-  resultado=numero1+numero2;
+  resultado=n1+2;
   res.render('calculator',{"El resultado de la suma es": resultado,"rstMessage":rstMessage});
 }
 
 if((POST["btnrestar"]))
 {
-  resultado=numero1+numero2;
+  resultado=n1+n2;
   res.render('calculator',{"El resultado de la resta es": resultado,"rstMessage":rstMessage});
 }
 
 if((POST["btnmultiplicar"]))
 {
-  resultado=numero1+numero2;
+  resultado=n1+n2;
   res.render('calculator',{"El resultado de la  es": resultado,"rstMessage":rstMessage});
 }
 
 if((POST["btndividir"]))
 {
-  resultado=numero1+numero2;
+  resultado=n1+n2;
   res.render('calculator',{"El resultado de la division  es": resultado,"rstMessage":rstMessage});
 }
 });
